@@ -1,0 +1,163 @@
+# Assignment 04
+
+**Group members**
+- Aditya Laksamana P Butar Butar (10231006) (Problem #2)
+- Cantika Ade Qutnindra Maharani (10231024) (Problem #3)
+- Ilham Ahmad Fahriji (10231042) (Problem #5)
+- Muhammad Ayash Az-Dzikri (10231060) (Problem #4)
+- Ranaya Chintya Mahitsa (10231078) (Problem #1)
+
+## Problem 1 (Combinatorial)
+Dalam suatu acara makan bersama, terdapat 3 meja bundar yang dapat diisi
+oleh 4 orang. Total tamu yang data sebanyak 15 orang. 
+Ada berapa banyak cara menyusun lokasi tempat duduk tamu-tamu tersebut?
+
+### Answer
+Untuk menentukan berapa banyak cara menyusun lokasi tempat duduk tamu-tamu tersebut, kita dapat menggunakan konsep permutasi.
+
+Jumlah cara menyusunnya dapat dihitung menggunakan rumus permutasi, yang dinyatakan sebagai \( nPr = \frac{n!}{(n-r)!} \)
+
+\[ P(15,4) = \frac{15!}{(15-4)!} \]
+
+
+\[ P(15,4) = \frac{15!}{11!} = \frac{15 \times 14 \times 13 \times 12 \times 11!}{11!} \]
+
+
+\[ P(15,4) = 15 \times 14 \times 13 \times 12 \]
+
+
+\[ P(15,4) = 32,760 \]
+
+Jadi, ada 32,760 cara menyusun lokasi tempat duduk untuk tamu-tamu tersebut.
+
+## Problem 2 (Graph 1a)
+Suatu graf dikatakan graf _bipartite_ jika kita dapat memisahkan 
+himpunan simpul-simpulnya (_vertices_), V  menjadi dua himpunan simpul V1
+dan V2 yang mana tidak ada busur (_edge_) sama sekali yang menghubungkan
+dua simpul di dalam satu himpunan yang sama.
+
+Sebagai contoh:
+<table>
+  <tr>
+    <td><b>Graf</b></td>
+    <td><b>Penjelasan</b></td>
+  </tr>
+  <tr>
+    <td><img src="figure/bipartite-ex-01.png" width=800></td>
+    <td> <b>Bipartite</b> karena kita dapat memisahkan simpul-simpulnya menjadi dua himpunan 
+    <i>V</i><sub>1</sub> = {
+      <i>v</i><sub>1</sub>, 
+      <i>v</i><sub>3</sub>, 
+      <i>v</i><sub>5</sub> } dan 
+    <i>V</i><sub>2</sub> = {
+      <i>v</i><sub>2</sub>, 
+      <i>v</i><sub>4</sub>, 
+      <i>v</i><sub>6</sub> } yang mana dimasing-masing himpunan 
+    <i>V</i></sub>1</sub>  dan <i>V</i><sub>2</sub> tidak ada busur penghubung dan setiap anggota <i>V</i><sub>1</sub> dan <i>V</i><sub>2</sub> memiliki setidaknya satu busur penghubung.</td>
+  </tr>
+  <tr>
+    <td><img src="figure/bipartite-ex-02.png" width=800></td> 
+    <td>Bukan bipartite, karena bagaimanapun kita memisahkan simpul-simpulnya, selalu ada penghubung antara simpul dalam satu himpunan yang sama. Misal kita buat <i>V</i><sub>1</sub> = { <i>v</i><sub>1</sub> } dan 
+    <i>V</i><sub>2</sub> = { <i>v</i><sub>2</sub>, <i>v</i><sub>3</sub> }. 
+    Maka sangatlah jelas <i>v</i><sub>2</sub> dan <i>v</i><sub>3</sub> masih terhubung oleh busur dan tidak sesuai dengan definisi bipartite.</td>
+  </tr>
+</table>
+Dari penjelasan di atas tentukan dan jelaskan apakah graf dibawah ini bipartite atau bukan:
+
+1. <img src="figure/bipartite-Q1.png" width=200 style="vertical-align:top">
+
+2. <img src="figure/bipartite-Q2.png" width=250 style="vertical-align:top">
+
+3. <img src="figure/bipartite-Q3.png" width=300 style="vertical-align:top">
+
+### Answer
+
+<table>
+  <tr>
+    <td><b>Graf</b></td>
+    <td><b>Penjelasan</b></td>
+  </tr>
+  <tr>
+    <td><img src="figure/bipartite-Q1.png" width=800></td>
+    <td> <b>Bipartite,</b> Ini merupakan graf bipartite lengkap dikarenakan graf G = (V,E) dengan
+    <i>V</i> = {
+      <i>v</i><sub>1</sub>, 
+      <i>v</i><sub>2</sub>, 
+      <i>v</i><sub>3</sub>,
+      <i>v</i><sub>4</sub>,
+      <i>v</i><sub>5</sub> } 
+      yang mana V = 
+      <i>v</i><sub>1</sub> 
+      ∪
+      <i>v</i><sub>2</sub> 
+      dan 
+      <i>v</i><sub>1</sub>
+      ∩
+      <i>v</i><sub>2</sub> = ∅
+      dan <i>V</i><sub>1</sub> = { v1, v2, v4, v5 } dan 
+      <i>V</i><sub>2</sub> = { v3 }. Setiap simpul V1 berelasi dengan setiap simpul V2 dan V1 dan V2 tidak ada pasangan simpul yang berelasi
+      </td>
+  </tr>
+  <tr>
+    <td><img src="figure/bipartite-Q2.png" width=800></td> 
+    <td><b>Bukan Bipartite</b>, Karena jika kita memisahakan simpulnya. Misal <i>V</i><sub>1</sub> = { <i>v</i><sub>1</sub>,<i>v</i><sub>2</sub>,<i>v</i><sub>5</sub> } dan <i>V</i><sub>2</sub> = { <i>v</i><sub>3</sub>,<i>v</i><sub>4</sub>,}. Maka <i>v</i><sub>1</sub> dan <i>v</i><sub>3</sub> masih terhubung dengan busur
+</td>
+  </tr>
+  <tr>
+    <td><img src="figure/bipartite-Q3.png" width=800></td> 
+    <td><b>Bipartite</b>, Jika memisahkan simpulnya <i>V</i><sub>1</sub> = { <i>v</i><sub>1</sub>,<i>v</i><sub>6</sub>,<i>v</i><sub>5</sub> },dan <i>V</i><sub>2</sub> = { <i>v</i><sub>2</sub>,<i>v</i><sub>3</sub>,<i>v</i><sub>4</sub> } tiap himpunan tidak memiliki busur penghubung dan tiap simpul memiliki satu busur penghubung</td>
+  </tr>
+</table>
+
+## Problem 3 (Graph 1b)
+Tentukan dan jelaskan apakah mungkin melalui semua busur hanya sekali
+di graf di bawah ini
+
+<img src="figure/euler-path-Q1.png" width=100>
+
+### Answer
+ Dari busur yang tersedia, terdapat 8 busur yang tidak dapat dilalui hanya sekali. Adapun sebab dibalik tidak dapatnya busur dilalui hanya sekali karena lintasan yang tersedia bukan merupakan lintasan euler.
+
+ Lintasan euler sendiri merupakan graf yang memiliki titik dengan derajat ganjil yang banyaknya kurang dari 3.
+
+ Adapun pada lintasan tersedia, titik pertama dari atas, titik keempat dari atas, titik kelima dari atas dan titik terakhir dari paling bawah merupakan titik yang menandakan derajat ganjil, otomatis menyebabkan lintasan bukan merupakan lintasan euler dan tidak dapat dilalui dalam sekali laluan saja.
+
+## Problem 4 (Graph coloring)
+
+Lakukan pewarnaan pada setiap simpul graf di bawah ini sedemikian rupa
+sehingga tidak ada dua simpul yang terhubung oleh suatu busur memiliki
+warna yang sama. Himpunan warna yang dapat dipakai:
+(Merah, Jingga, Kuning, Hijau, Biru, Ungu, dst.)
+
+<img src="figure/graph-coloring-Q1.png" width=300>
+
+Ada berapa jumlah warna paling sedikit yang digunakan untuk mewarnai
+graf diatas?
+
+### Answer
+Berikut adalah graf yang telah diberi pewarnaan pada setiap simpulnya
+
+<img src="figure/Problem 4.jpg" width=300>
+
+Untuk jumlah warna yang paling sedikit digunakan ialah warna biru
+
+## Problem 5 (Tree)
+
+Berikut adalah papan dari _ultimate Tic-Tac-Toe_ berukuran 2x2.
+
+<img src="figure/ultimate-tix-tac-toe-2x2-Q1.drawio.png" width=300>
+
+Jika pemain pertama memulai dengan simbol X. Tentukan dan gambarkan 
+diagram tree untuk 
+kemungkinan dua langkah pertama dimulai dari papan kosong.
+_Petunjuk_: Gunakan drawio untuk menggambar langkah papan lebih cepat.
+
+### Answer
+
+Berikut adalah Diagram Tree dari Papan _ultimate Tic-Tac-Toe_ berukuran 2x2.
+
+
+<img src="DiagramTree-Tic-Tac-Toe.png" width=500>
+
+ini adalah kemungkinan dua langkah pertama bila pemain pertama memulai
+dengan simbol x ini kemungkinan langkah yang akan diambil oleh pemain kedua 
